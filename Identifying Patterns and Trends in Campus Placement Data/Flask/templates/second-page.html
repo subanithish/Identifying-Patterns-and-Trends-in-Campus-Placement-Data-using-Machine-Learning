@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    body {
+      background-color: lavender;
+      position: relative;
+    }
+    button[type="submit"] {
+      position: fixed;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      font-size: 20px;
+      padding: 15px 30px;
+    }
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<section id="hero" class="d-flex flex-column justify-content-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-8">
+        <h1>The Prediction is: {{y}}</h1>
+        <h3 style="text-align:center;">0 Represents Not-placed</h3>
+        <h3 style="text-align:center;">1 Represents Placed</h3>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

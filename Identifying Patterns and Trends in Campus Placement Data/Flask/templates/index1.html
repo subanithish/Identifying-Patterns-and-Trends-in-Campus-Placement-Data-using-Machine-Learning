@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Placement Prediction</title><style>
+  .about {
+    background-color: lavender;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .first {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .section-title h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #222222;
+  }
+</style>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>Fill the details</h2>
+    </div>
+    <div class="row content">
+      <div class="first">
+        <form action="{{ url_for('y_predict') }}" method="POST">
+          <label for="sen1">Age:</label>
+          <input type="number" id="sen1" name="sen1" placeholder="Enter your age">
+
+          <label for="sen2">Gender:</label>
+          <input type="number" id="sen2" name="sen2" placeholder="Enter your gender (M=0, F=1)">
+
+          <label for="sen3">Stream:</label>
+          <input type="number" id="sen3" name="sen3" placeholder="Enter your stream (CS=0, IT=1, ECE=2, Mech=3, EEE=4, Civil=5)">
+
+          <label for="sen4">Internships:</label>
+          <input type="number" id="sen4" name="sen4" placeholder="Internships">
+
+          <label for="sen5">CGPA:</label>
+          <input type="number" id="sen5" name="sen5" placeholder="CGPA">
+
+          <label for="sen6">Number of Backlogs:</label>
+          <input type="number" id="sen6" name="sen6" placeholder="backlogs">
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
